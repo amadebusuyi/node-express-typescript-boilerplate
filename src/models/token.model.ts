@@ -10,8 +10,8 @@ export interface IToken {
   blacklisted: boolean;
 }
 
-// eslint-disable-next-line @typescript-eslint/no-empty-interface
-export interface ITokenModel extends Model<IToken, Record<string, never>, Record<string, never>> {}
+// eslint-disable-next-line @typescript-eslint/no-empty-interface, @typescript-eslint/no-explicit-any
+export interface ITokenModel extends Model<IToken, Record<string, any>, Record<string, any>> {}
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export type ITokenDoc = IToken & Document<Record<string, any>, Record<string, never>, IToken>;
